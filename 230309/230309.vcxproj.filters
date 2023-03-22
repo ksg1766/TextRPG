@@ -36,6 +36,15 @@
     <Filter Include="소스 파일\TextRPG\UI">
       <UniqueIdentifier>{5411537f-90ef-4d4d-bdf6-4f016f234943}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\TextRPG\Component">
+      <UniqueIdentifier>{9674afb6-a596-402b-881a-ff1a00ccef62}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\TextRPG\Controller\Shop">
+      <UniqueIdentifier>{03436934-1b6f-4e05-9b69-e8411eef96e4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\TextRPG\Controller\Item">
+      <UniqueIdentifier>{6bc393cf-935e-4cde-9e7d-a1bd89f29a3a}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -71,6 +80,30 @@
     <ClCompile Include="Inventory.cpp">
       <Filter>소스 파일\TextRPG\UI</Filter>
     </ClCompile>
+    <ClCompile Include="Armor.cpp">
+      <Filter>소스 파일\TextRPG\Controller\Item</Filter>
+    </ClCompile>
+    <ClCompile Include="ArmorShop.cpp">
+      <Filter>소스 파일\TextRPG\Controller\Shop</Filter>
+    </ClCompile>
+    <ClCompile Include="Shop.cpp">
+      <Filter>소스 파일\TextRPG\Controller\Shop</Filter>
+    </ClCompile>
+    <ClCompile Include="Weapon.cpp">
+      <Filter>소스 파일\TextRPG\Controller\Item</Filter>
+    </ClCompile>
+    <ClCompile Include="WeaponShop.cpp">
+      <Filter>소스 파일\TextRPG\Controller\Shop</Filter>
+    </ClCompile>
+    <ClCompile Include="Item.cpp">
+      <Filter>소스 파일\TextRPG\Controller\Item</Filter>
+    </ClCompile>
+    <ClCompile Include="ConsumShop.cpp">
+      <Filter>소스 파일\TextRPG\Controller\Shop</Filter>
+    </ClCompile>
+    <ClCompile Include="Consumable.cpp">
+      <Filter>소스 파일\TextRPG\Controller\Item</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h">
@@ -105,6 +138,30 @@
     </ClInclude>
     <ClInclude Include="Inventory.h">
       <Filter>소스 파일\TextRPG\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="Armor.h">
+      <Filter>소스 파일\TextRPG\Controller\Item</Filter>
+    </ClInclude>
+    <ClInclude Include="ArmorShop.h">
+      <Filter>소스 파일\TextRPG\Controller\Shop</Filter>
+    </ClInclude>
+    <ClInclude Include="Shop.h">
+      <Filter>소스 파일\TextRPG\Controller\Shop</Filter>
+    </ClInclude>
+    <ClInclude Include="Weapon.h">
+      <Filter>소스 파일\TextRPG\Controller\Item</Filter>
+    </ClInclude>
+    <ClInclude Include="WeaponShop.h">
+      <Filter>소스 파일\TextRPG\Controller\Shop</Filter>
+    </ClInclude>
+    <ClInclude Include="Item.h">
+      <Filter>소스 파일\TextRPG\Controller\Item</Filter>
+    </ClInclude>
+    <ClInclude Include="ConsumShop.h">
+      <Filter>소스 파일\TextRPG\Controller\Shop</Filter>
+    </ClInclude>
+    <ClInclude Include="Consumable.h">
+      <Filter>소스 파일\TextRPG\Controller\Item</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -1,7 +1,7 @@
 #pragma once
 #include "define.h"
 #include "BaseCreature.h"
-#include <vector>
+//#include <vector>
 
 class CObserver;
 class CCreature : public CBaseCreature
@@ -34,7 +34,7 @@ public:
 	void SetDef(int _def);
 	void SetIsDead(bool _isDead);
 
-	void Render() const override;
+	virtual void Render() const override;
 
 	~CCreature(){}
 

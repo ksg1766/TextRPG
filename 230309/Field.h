@@ -6,8 +6,8 @@ class CPet;
 class CField
 {
 public:
-	CField();
-	CField(CPlayer* _player);
+	CField() : player(nullptr), monster(nullptr) {}
+	CField(CPlayer* _player) : player(_player), monster(nullptr) {}
 
 	void Initialize();
 	void CreateMonster(int _iCase);

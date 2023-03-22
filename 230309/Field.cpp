@@ -8,11 +8,6 @@
 
 #define IF_MONSTER_ALIVE	if (monster->GetIsDead()) break;
 
-CField::CField(CPlayer* _player)
-{
-	player = _player;
-}
-
 void CField::Initialize() {}
 
 void CField::CreateMonster(int _iCase)
@@ -32,6 +27,8 @@ void CField::Update()
 		SAFE_DELETE(monster);
 
 		if (player->GetIsDead())	// 플레이어가 사망 상태라면 다시 초기화
+			break;
+		if (!player)
 			break;
 		if (player->GetState() == STATE::중독)	// 모든 디버프 해제
 			player->SetState(STATE::정상);
@@ -71,6 +68,7 @@ void CField::EnterField()
 		if (player->GetIsDead())							// 몬스터는 살아있는데 플레이어가 죽었다면
 		{
 			cout << "\n플레이어 사망\n";
+			//SAFE_DELETE(player)
 			system("pause");
 			break;
 		}
@@ -147,7 +145,7 @@ void CField::EnterField()
 					continue;
 				}
 
-				player->SetItemCount(player->GetItemCount() - 1);
+				player->SubItem(0);
 				player->SetHp(player->GetHp() + 30);
 				cout << "체력이 30 회복되었습니다.";
 
@@ -183,8 +181,8 @@ void CField::EnterField()
 			}
 		}
 	}
-	player->RemoveObserver();
-	player->GetPet().RemoveObserver();
+	/*player->RemoveObserver();
+	player->GetPet().RemoveObserver();*/
 }
 //void CField::Render(CPlayer _player, CCreature _monster)
 //{

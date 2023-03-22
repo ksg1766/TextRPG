@@ -1,0 +1,33 @@
+﻿  ArmorShop.cpp
+C:\Users\pc\Desktop\jusin\TextRPG\230309\Shop.h(23,4): warning C4150: 불완전한 형식 'CItem'에 대한 포인터를 삭제했습니다. 소멸자가 호출되지 않습니다.
+C:\Users\pc\Desktop\jusin\TextRPG\230309\Shop.h(5,7): message : 'CItem' 선언을 참조하십시오.
+  ConsumShop.cpp
+C:\Users\pc\Desktop\jusin\TextRPG\230309\Shop.h(23,4): warning C4150: 불완전한 형식 'CItem'에 대한 포인터를 삭제했습니다. 소멸자가 호출되지 않습니다.
+C:\Users\pc\Desktop\jusin\TextRPG\230309\Shop.h(5,7): message : 'CItem' 선언을 참조하십시오.
+C:\Users\pc\Desktop\jusin\TextRPG\230309\Player.h(42,3): warning C4150: 불완전한 형식 'CInventory'에 대한 포인터를 삭제했습니다. 소멸자가 호출되지 않습니다.
+C:\Users\pc\Desktop\jusin\TextRPG\230309\Player.h(6,7): message : 'CInventory' 선언을 참조하십시오.
+C:\Users\pc\Desktop\jusin\TextRPG\230309\Player.h(43,3): warning C4150: 불완전한 형식 'CPet'에 대한 포인터를 삭제했습니다. 소멸자가 호출되지 않습니다.
+C:\Users\pc\Desktop\jusin\TextRPG\230309\Player.h(5,7): message : 'CPet' 선언을 참조하십시오.
+  GameManager.cpp
+C:\Users\pc\Desktop\jusin\TextRPG\230309\Player.h(43,3): warning C4150: 불완전한 형식 'CPet'에 대한 포인터를 삭제했습니다. 소멸자가 호출되지 않습니다.
+C:\Users\pc\Desktop\jusin\TextRPG\230309\Player.h(5,7): message : 'CPet' 선언을 참조하십시오.
+C:\Users\pc\Desktop\jusin\TextRPG\230309\Player.h(45,4): warning C4150: 불완전한 형식 'CItem'에 대한 포인터를 삭제했습니다. 소멸자가 호출되지 않습니다.
+C:\Users\pc\Desktop\jusin\TextRPG\230309\Player.h(4,7): message : 'CItem' 선언을 참조하십시오.
+C:\Users\pc\Desktop\jusin\TextRPG\230309\Shop.h(23,4): warning C4150: 불완전한 형식 'CItem'에 대한 포인터를 삭제했습니다. 소멸자가 호출되지 않습니다.
+C:\Users\pc\Desktop\jusin\TextRPG\230309\Shop.h(5,7): message : 'CItem' 선언을 참조하십시오.
+  Shop.cpp
+C:\Users\pc\Desktop\jusin\TextRPG\230309\Shop.h(23,4): warning C4150: 불완전한 형식 'CItem'에 대한 포인터를 삭제했습니다. 소멸자가 호출되지 않습니다.
+C:\Users\pc\Desktop\jusin\TextRPG\230309\Shop.h(5,7): message : 'CItem' 선언을 참조하십시오.
+C:\Users\pc\Desktop\jusin\TextRPG\230309\Player.h(42,3): warning C4150: 불완전한 형식 'CInventory'에 대한 포인터를 삭제했습니다. 소멸자가 호출되지 않습니다.
+C:\Users\pc\Desktop\jusin\TextRPG\230309\Player.h(6,7): message : 'CInventory' 선언을 참조하십시오.
+C:\Users\pc\Desktop\jusin\TextRPG\230309\Player.h(43,3): warning C4150: 불완전한 형식 'CPet'에 대한 포인터를 삭제했습니다. 소멸자가 호출되지 않습니다.
+C:\Users\pc\Desktop\jusin\TextRPG\230309\Player.h(5,7): message : 'CPet' 선언을 참조하십시오.
+  WeaponShop.cpp
+C:\Users\pc\Desktop\jusin\TextRPG\230309\Shop.h(23,4): warning C4150: 불완전한 형식 'CItem'에 대한 포인터를 삭제했습니다. 소멸자가 호출되지 않습니다.
+C:\Users\pc\Desktop\jusin\TextRPG\230309\Shop.h(5,7): message : 'CItem' 선언을 참조하십시오.
+C:\Users\pc\Desktop\jusin\TextRPG\230309\Player.h(42,3): warning C4150: 불완전한 형식 'CInventory'에 대한 포인터를 삭제했습니다. 소멸자가 호출되지 않습니다.
+C:\Users\pc\Desktop\jusin\TextRPG\230309\Player.h(6,7): message : 'CInventory' 선언을 참조하십시오.
+C:\Users\pc\Desktop\jusin\TextRPG\230309\Player.h(43,3): warning C4150: 불완전한 형식 'CPet'에 대한 포인터를 삭제했습니다. 소멸자가 호출되지 않습니다.
+C:\Users\pc\Desktop\jusin\TextRPG\230309\Player.h(5,7): message : 'CPet' 선언을 참조하십시오.
+  코드를 생성하고 있습니다...
+  230309.vcxproj -> C:\Users\pc\Desktop\jusin\TextRPG\Debug\TextRPG.exe

@@ -1,6 +1,7 @@
 #include "stdafx.h"
 #include "Inventory.h"
 #include "Player.h"
+#include "Item.h"
 
 CInventory::CInventory(const CInventory& rhs)
 {
@@ -12,5 +13,5 @@ void CInventory::ShowPlayerItems() const
 	if (!(player->GetItemCount()))
 		cout << "보유중인 아이템이 없습니다.\n";
 	for (int i = 0; i < player->GetItemCount(); i++)
-		cout << i + 1 << ". " << player->GetItems(i) << '\n';
+		cout << i + 1 << ". " << player->GetItems(i)->GetItemName() << '\n';
 }

@@ -7,7 +7,7 @@ class CPet;
 class GameManager
 {
 public:
-	explicit GameManager(){}
+	explicit GameManager() : player(nullptr), field(nullptr) {}
 
 	bool InitGame();
 	void Update();

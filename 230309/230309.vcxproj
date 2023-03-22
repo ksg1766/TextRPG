@@ -132,6 +132,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Armor.cpp" />
+    <ClCompile Include="ArmorShop.cpp" />
+    <ClCompile Include="Consumable.cpp" />
+    <ClCompile Include="ConsumShop.cpp" />
+    <ClCompile Include="Item.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="BaseCreature.cpp" />
     <ClCompile Include="Creature.cpp" />
@@ -141,6 +146,7 @@
     <ClCompile Include="Observer.cpp" />
     <ClCompile Include="Pet.cpp" />
     <ClCompile Include="Player.cpp" />
+    <ClCompile Include="Shop.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
@@ -148,19 +154,29 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="UI.cpp" />
+    <ClCompile Include="Weapon.cpp" />
+    <ClCompile Include="WeaponShop.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Armor.h" />
+    <ClInclude Include="ArmorShop.h" />
     <ClInclude Include="BaseCreature.h" />
+    <ClInclude Include="Consumable.h" />
+    <ClInclude Include="ConsumShop.h" />
     <ClInclude Include="Creature.h" />
     <ClInclude Include="define.h" />
     <ClInclude Include="Field.h" />
     <ClInclude Include="GameManager.h" />
     <ClInclude Include="Inventory.h" />
+    <ClInclude Include="Item.h" />
     <ClInclude Include="Observer.h" />
     <ClInclude Include="Pet.h" />
     <ClInclude Include="Player.h" />
+    <ClInclude Include="Shop.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="UI.h" />
+    <ClInclude Include="Weapon.h" />
+    <ClInclude Include="WeaponShop.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

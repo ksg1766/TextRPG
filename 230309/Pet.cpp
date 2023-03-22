@@ -1,6 +1,7 @@
 #include "stdafx.h"
 #include "Pet.h"
 #include "Player.h"
+#include "Item.h"
 
 void CPet::Heal(CCreature* _object)
 {
@@ -100,7 +101,8 @@ void CPet::Fight(CCreature* _monster)
 	}
 	else										// 몬스터는 죽고 펫이 살아있다면 승리 후 사냥터 선택
 	{
-		cTamer->AddItems("회복약", 1);
+		//cTamer->AddItem("회복약", 1);
+		cTamer->AddItem(new CItem("회복약", 50, 30));
 		cout << "회복약을 획득하였습니다.\n\n";
 		cout << "승리\n";
 		system("pause");

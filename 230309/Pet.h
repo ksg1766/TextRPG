@@ -5,22 +5,22 @@ class CPlayer;
 class CPet : public CCreature
 {
 public:
-	CPet() {}
+	CPet() : CCreature(), m_iState(STATE::정상), cTamer(nullptr), m_ReviveCount(0), cObserver(nullptr) {}
 	CPet(CCreature* _monster, CPlayer* _player)
-		: CCreature(_monster->GetName(), _monster->GetMaxHp(), _monster->GetDps(), _monster->GetDef()), m_iState(STATE::정상), cTamer(_player), m_ReviveCount(1) {}
+		: CCreature(_monster->GetName(), _monster->GetMaxHp(), _monster->GetDps(), _monster->GetDef()), m_iState(STATE::정상), cTamer(_player), m_ReviveCount(1), cObserver(nullptr){}
 	CPet(const CPet& rhs);
 
-	void AddObserver(CObserver* observer) override;
+	virtual void AddObserver(CObserver* observer) override;
 	//void RemoveObserver() override;
-	void NotifyObserver() override;
-	void NotifyObserver(CBaseCreature* _monster) override;
+	virtual void NotifyObserver() override;
+	virtual void NotifyObserver(CBaseCreature* _monster) override;
 
 	//void InitPet();
 	void PetSkill(CCreature* _monster);
 	void Fight(CCreature* _monster);
 	void Heal(CCreature* _object);
 	void Reviving();
-	void Render() const override;
+	virtual void Render() const override;
 
 	void SetState(const int& _state);
 	int GetState() const;
