@@ -6,8 +6,6 @@ class CWeaponShop : public CShop
 public:
 	CWeaponShop();
 	CWeaponShop(const CWeaponShop& rhs);
-	CWeaponShop(CCreature* _creature);
-	virtual ~CWeaponShop() override;
-
-	virtual const void ShowItems() const override;
+	CWeaponShop(CPlayerGO* _creature);
+	virtual ~CWeaponShop() override {};
 };

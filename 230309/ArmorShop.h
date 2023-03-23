@@ -6,7 +6,6 @@ class CArmorShop : public CShop
 public:
 	CArmorShop();
 	CArmorShop(const CArmorShop& rhs);
-	CArmorShop(CCreature* _creature);
-
-	virtual const void ShowItems() const override;
+	CArmorShop(CPlayerGO* _cPlayer);
+	virtual ~CArmorShop() override {};
 };

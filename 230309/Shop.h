@@ -1,22 +1,21 @@
 #pragma once
 #include "define.h"
+#include "GameObject.h"
 
-class CWeapon;
 class CItem;
-class CCreature;
-class CShop
+class CPlayerGO;
+class CStorageComponent;
+class CShop : public GameObject
 {
 public:
 	CShop();
 	CShop(const CShop& rhs);
-	CShop(CCreature* _creature);
+	CShop(CPlayerGO* _creature);
 
 	void Update();
-	void AddItem(const char* _name, int _price, int _property);
-	void SubItem(int _iIndex);
-	void BuyItem(CCreature* _creature, int _iIndex);
-	void SellItem(CCreature* _creature, int _iIndex);
-	virtual const void ShowItems() const = 0;
+	void BuyItem(CPlayerGO* _creature, int _iIndex);
+	void SellItem(CPlayerGO* _creature, int _iIndex);
+	const void ShowItems() const;
 	virtual ~CShop() 
 	{
 		for(int i = 0; i < m_iNumOfItems; ++i)
@@ -24,12 +23,16 @@ public:
 	};
 
 	const int GetCapacity() const;
-	const int GetNumOfItems() const;
+	int* GetNumOfItems();
 	const CItem* GetItem(int i) const;
+	CItem** GetItemList() { return m_cItemList; }
 
-private:
+protected:
 	int m_iCapacity;
 	int m_iNumOfItems;
-	CItem* m_cItemList[10];
-	CCreature* m_cPlayer;
+	CItem* m_cItemList[8];
+	CPlayerGO* m_cPlayer;
+
+	CStorageComponent* m_cPlayerStorage;
+	CStorageComponent* m_cShopStorage;
 };

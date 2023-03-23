@@ -9,8 +9,8 @@ void main()
 	_CrtDumpMemoryLeaks();
 	//_CrtSetBreakAlloc(246);
 	ios_base::sync_with_stdio(false);
-	cin >> fixed;
-	cout << fixed;
+	cin.tie(NULL);
+	cout.tie(NULL);
 #pragma endregion
 	GameManager gameManager;
 	while (gameManager.InitGame())

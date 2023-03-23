@@ -45,6 +45,21 @@
     <Filter Include="소스 파일\TextRPG\Controller\Item">
       <UniqueIdentifier>{6bc393cf-935e-4cde-9e7d-a1bd89f29a3a}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\TextRPG\GameObject">
+      <UniqueIdentifier>{c846c025-fce6-4485-97d7-900c18094518}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\TextRPG\Component\BaseClass">
+      <UniqueIdentifier>{a0dca8ed-b07c-4581-a2a8-0e916736a31d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\TextRPG\Component\SubClass">
+      <UniqueIdentifier>{d048d813-d37f-4b6f-abc2-203877c0333a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\TextRPG\GameObject\BaseClass">
+      <UniqueIdentifier>{2f0ce318-3f48-4e88-a5ea-fb5835cbf926}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\TextRPG\GameObject\SubClass">
+      <UniqueIdentifier>{db2e5c5b-0331-4be3-8108-3d483e06795d}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -104,6 +119,42 @@
     <ClCompile Include="Consumable.cpp">
       <Filter>소스 파일\TextRPG\Controller\Item</Filter>
     </ClCompile>
+    <ClCompile Include="StorageComponent.cpp">
+      <Filter>소스 파일\TextRPG\Component\SubClass</Filter>
+    </ClCompile>
+    <ClCompile Include="ObserverComponent.cpp">
+      <Filter>소스 파일\TextRPG\Component\SubClass</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayerRenderComponent.cpp">
+      <Filter>소스 파일\TextRPG\Component\SubClass</Filter>
+    </ClCompile>
+    <ClCompile Include="GameObject.cpp">
+      <Filter>소스 파일\TextRPG\GameObject\BaseClass</Filter>
+    </ClCompile>
+    <ClCompile Include="MonsterGO.cpp">
+      <Filter>소스 파일\TextRPG\GameObject\SubClass</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayerGO.cpp">
+      <Filter>소스 파일\TextRPG\GameObject\SubClass</Filter>
+    </ClCompile>
+    <ClCompile Include="CreatureGO.cpp">
+      <Filter>소스 파일\TextRPG\GameObject\BaseClass</Filter>
+    </ClCompile>
+    <ClCompile Include="MonsterRenderComponent.cpp">
+      <Filter>소스 파일\TextRPG\Component\SubClass</Filter>
+    </ClCompile>
+    <ClCompile Include="PetRenderComponent.cpp">
+      <Filter>소스 파일\TextRPG\Component\SubClass</Filter>
+    </ClCompile>
+    <ClCompile Include="PetGO.cpp">
+      <Filter>소스 파일\TextRPG\GameObject\SubClass</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayerActionComponent.cpp">
+      <Filter>소스 파일\TextRPG\Component\SubClass</Filter>
+    </ClCompile>
+    <ClCompile Include="MonsterActionComponent.cpp">
+      <Filter>소스 파일\TextRPG\Component\SubClass</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h">
@@ -162,6 +213,51 @@
     </ClInclude>
     <ClInclude Include="Consumable.h">
       <Filter>소스 파일\TextRPG\Controller\Item</Filter>
+    </ClInclude>
+    <ClInclude Include="Component.h">
+      <Filter>소스 파일\TextRPG\Component\BaseClass</Filter>
+    </ClInclude>
+    <ClInclude Include="RenderComponent.h">
+      <Filter>소스 파일\TextRPG\Component\BaseClass</Filter>
+    </ClInclude>
+    <ClInclude Include="StorageComponent.h">
+      <Filter>소스 파일\TextRPG\Component\SubClass</Filter>
+    </ClInclude>
+    <ClInclude Include="MonsterRenderComponent.h">
+      <Filter>소스 파일\TextRPG\Component\SubClass</Filter>
+    </ClInclude>
+    <ClInclude Include="ObserverComponent.h">
+      <Filter>소스 파일\TextRPG\Component\SubClass</Filter>
+    </ClInclude>
+    <ClInclude Include="GameObject.h">
+      <Filter>소스 파일\TextRPG\GameObject\BaseClass</Filter>
+    </ClInclude>
+    <ClInclude Include="MonsterGO.h">
+      <Filter>소스 파일\TextRPG\GameObject\SubClass</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayerGO.h">
+      <Filter>소스 파일\TextRPG\GameObject\SubClass</Filter>
+    </ClInclude>
+    <ClInclude Include="CreatureGO.h">
+      <Filter>소스 파일\TextRPG\GameObject\BaseClass</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayerRenderComponent.h">
+      <Filter>소스 파일\TextRPG\Component\SubClass</Filter>
+    </ClInclude>
+    <ClInclude Include="PetRenderComponent.h">
+      <Filter>소스 파일\TextRPG\Component\SubClass</Filter>
+    </ClInclude>
+    <ClInclude Include="PetGO.h">
+      <Filter>소스 파일\TextRPG\GameObject\SubClass</Filter>
+    </ClInclude>
+    <ClInclude Include="ActionComponent.h">
+      <Filter>소스 파일\TextRPG\Component\BaseClass</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayerActionComponent.h">
+      <Filter>소스 파일\TextRPG\Component\SubClass</Filter>
+    </ClInclude>
+    <ClInclude Include="MonsterActionComponent.h">
+      <Filter>소스 파일\TextRPG\Component\SubClass</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

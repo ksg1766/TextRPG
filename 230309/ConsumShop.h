@@ -6,7 +6,6 @@ class CConsumShop : public CShop
 public:
 	CConsumShop();
 	CConsumShop(const CConsumShop& rhs);
-	CConsumShop(CCreature* _creature);
-
-	virtual const void ShowItems() const override;
+	CConsumShop(CPlayerGO* _cPlayer);
+	virtual ~CConsumShop() override {};
 };
