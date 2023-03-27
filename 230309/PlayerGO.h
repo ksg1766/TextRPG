@@ -6,30 +6,29 @@ class CItem;
 class CPlayerGO : public CCreatureGO
 {
 public:
-	CPlayerGO() :CCreatureGO(){}
-	CPlayerGO(const char* _szName);
-	//virtual void Update() override;
+	CPlayerGO();
+
+	void InitPlayer(JOB _job);
+	virtual void Update() override;
 
 #pragma region Set
-	void SetNumOfItems(int _num) { m_iNumOfItems = _num; }
 
 #pragma endregion Set
 
 #pragma region Get
-	int* GetNumOfItems() { return &m_iNumOfItems; }
-	CItem** GetItemList() { return m_cItemList; }
+	vector<CItem*>* GetItemList() { return &m_vecItemList; }
 #pragma endregion Get
 
 private:
 	CPet* m_cPet;
-	int m_iNumOfItems;
-	CItem* m_cItemList[8];
+	vector<CItem*> m_vecItemList;
+	LOCATION m_location;
 	/*
 	int m_iHp;
 	int m_iDps;
 	int m_iDef;
-	int m_iCountComponents;
-	Component* m_cComponents[10];
+
+	vector<Component*> m_vecComponents;
 	char m_szName[10];
 	*/
 };

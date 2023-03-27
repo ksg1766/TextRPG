@@ -11,12 +11,13 @@ public:
 
 	//virtual void Update() = 0;
 
+	vector<CItem*>* GetItemList() { return m_vecItemList; }
 	void AddItem(CItem* _cItem);
 	void SubItem(int _iIndex);
-	void RenderStorage() const;
+	void RenderStorage();
+	void Use();
 
 private:
+	vector<CItem*>* m_vecItemList;
 	GameObject* m_cObject;
-	int* m_iNumOfItems;
-	CItem** m_cItemList;
 };

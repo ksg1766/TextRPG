@@ -136,8 +136,11 @@
     <ClCompile Include="ArmorShop.cpp" />
     <ClCompile Include="Consumable.cpp" />
     <ClCompile Include="ConsumShop.cpp" />
-    <ClCompile Include="CreatureGO.cpp" />
+    <ClCompile Include="FieldGS.cpp" />
     <ClCompile Include="GameObject.cpp" />
+    <ClCompile Include="GameScene.cpp" />
+    <ClCompile Include="PetActionComponent.cpp" />
+    <ClCompile Include="Potion.cpp" />
     <ClCompile Include="StorageComponent.cpp" />
     <ClCompile Include="Item.cpp" />
     <ClCompile Include="main.cpp" />
@@ -181,9 +184,13 @@
     <ClInclude Include="CreatureGO.h" />
     <ClInclude Include="define.h" />
     <ClInclude Include="Field.h" />
+    <ClInclude Include="FieldGS.h" />
     <ClInclude Include="GameManager.h" />
     <ClInclude Include="GameObject.h" />
+    <ClInclude Include="GameScene.h" />
     <ClInclude Include="Inventory.h" />
+    <ClInclude Include="PetActionComponent.h" />
+    <ClInclude Include="Potion.h" />
     <ClInclude Include="StorageComponent.h" />
     <ClInclude Include="Item.h" />
     <ClInclude Include="MonsterActionComponent.h" />

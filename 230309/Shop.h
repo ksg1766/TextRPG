@@ -18,21 +18,17 @@ public:
 	const void ShowItems() const;
 	virtual ~CShop() 
 	{
-		for(int i = 0; i < m_iNumOfItems; ++i)
-			SAFE_DELETE(m_cItemList[i])
+		for (CItem* _item : m_vecItemList)
+			SAFE_DELETE(_item)
 	};
 
-	const int GetCapacity() const;
-	int* GetNumOfItems();
+
 	const CItem* GetItem(int i) const;
-	CItem** GetItemList() { return m_cItemList; }
+	vector<CItem*>* GetItemList() { return &m_vecItemList; }
 
 protected:
-	int m_iCapacity;
-	int m_iNumOfItems;
-	CItem* m_cItemList[8];
+	vector<CItem*> m_vecItemList;
 	CPlayerGO* m_cPlayer;
-
 	CStorageComponent* m_cPlayerStorage;
 	CStorageComponent* m_cShopStorage;
 };

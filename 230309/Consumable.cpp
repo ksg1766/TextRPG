@@ -1,5 +1,8 @@
 #include "stdafx.h"
 #include "Consumable.h"
+#include"CreatureGO.h"
+//#include "PlayerGO.h"
+//#include "PetGO.h"
 
 CConsumable::CConsumable()
 {

@@ -17,15 +17,14 @@
 //		AddItem(rhs.GetItem(i)->GetItemName(), rhs.GetItem(i)->GetPrice(), rhs.GetItem(i)->GetProperty());
 //}
 
-CShop::CShop(CPlayerGO* _creature) : m_cPlayer(_creature), m_iCapacity(10), m_iNumOfItems(0)
+CShop::CShop(CPlayerGO* _creature) : m_cPlayer(_creature)
 {
-	for (int i = 0; i < m_iNumOfItems; ++i)
-		m_cItemList[i] = nullptr;
-	
 	AddComponent(new CStorageComponent());
 
-	m_cPlayerStorage = static_cast<CStorageComponent*>(static_cast<CPlayerGO*>(_creature)->GetComponent("class CStorageComponent"));
-	m_cShopStorage = static_cast<CStorageComponent*>(GetComponent("class CStorageComponent"));
+	/*m_cPlayerStorage = m_cPlayer->GetComponent(typeid(CStorageComponent));
+	m_cShopStorage = this->GetComponent(typeid(CStorageComponent));*/
+	m_cPlayerStorage = static_cast<CStorageComponent>(m_cPlayer->GetComponent(typeid(CStorageComponent)));
+	m_cShopStorage = static_cast<CStorageComponent>(this->GetComponent(typeid(CStorageComponent)));
 }
 
 void CShop::Update()
@@ -85,7 +84,7 @@ void CShop::Update()
 
 void CShop::BuyItem(CPlayerGO* _creature, int _iIndex)
 {
-	m_cPlayerStorage->AddItem(m_cItemList[_iIndex]);
+	m_cPlayerStorage->AddItem(m_vecItemList[_iIndex]);
 	m_cShopStorage->SubItem(_iIndex);
 }
 
@@ -99,17 +98,7 @@ const void CShop::ShowItems() const
 	m_cShopStorage->RenderStorage();
 }
 
-const int CShop::GetCapacity() const
-{
-	return m_iCapacity;
-}
-
-int* CShop::GetNumOfItems()
-{
-	return &m_iNumOfItems;;
-}
-
 const CItem* CShop::GetItem(int i) const
 {
-	return m_cItemList[i];
+	return m_vecItemList[i];
 }

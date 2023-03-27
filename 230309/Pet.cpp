@@ -32,7 +32,7 @@ void CPet::Render() const
 	cout << "\n==============================================================================";
 	cout << "\n펫 이름 : " << GetName() << '\n' << "체력 : " << GetHp() << "\t공격력 : " << GetDps() << "\t방어력 : " << GetDef() << "\t남은 소생 스킬 횟수: " << GetRevive();
 
-	if (GetState() == STATE::중독)
+	if (GetState() == STATE::출혈)
 		cout << "\n!!!중독 상태입니다!!!";
 	cout << "\n==============================================================================";
 }
@@ -87,10 +87,10 @@ void CPet::Fight(CCreature* _monster)
 
 		if (!strcmp(_monster->GetName(), "고급"))		// 고급 필드라면 피격 시 중독상태 부여
 		{
-			if (GetState() == STATE::중독)
+			if (GetState() == STATE::출혈)
 				Hit(5);
 			else
-				SetState(STATE::중독);			// 첫 턴 이후 부터 체력 턴당 5씩 감소
+				SetState(STATE::출혈);			// 첫 턴 이후 부터 체력 턴당 5씩 감소
 		}
 
 		if (GetHp() <= 0)						// 몬스터는 살아있는데 펫이 죽었다면

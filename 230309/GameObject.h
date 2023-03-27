@@ -1,7 +1,7 @@
 #pragma once
 #include "Component.h"
 #include "define.h"
-
+#include <vector>
 class GameObject
 {
 public:
@@ -14,11 +14,13 @@ public:
 	const char* GetName() const { return m_szName; }
 
 	void AddComponent(Component* _cComponent);
-	Component* GetComponent(const char* _szComponent) const;
+	Component* GetComponent(const type_info& typeInfo);
+	//Component* GetComponent(const type_info& typeInfo);
+	//Component* GetComponent() const;
+
 	virtual ~GameObject() = 0;
 
 protected:
-	int m_iCountComponents;
-	Component* m_cComponents[10];
+	vector<Component*> m_vecComponents;
 	char m_szName[10];
 };

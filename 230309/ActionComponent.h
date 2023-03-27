@@ -6,7 +6,7 @@ class CActionComponent : public Component
 {
 public:
 	//virtual void Update();
-	virtual void Init() = 0;
-	virtual void Attack() = 0;
+	virtual void Init(CCreatureGO*) = 0;
+	virtual void Attack(CCreatureGO*) = 0;
 	// void Hit();
 };

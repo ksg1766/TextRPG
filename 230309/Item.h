@@ -1,4 +1,5 @@
 #pragma once
+class CCreatureGO;
 class CItem
 {
 public:
@@ -6,7 +7,7 @@ public:
 	CItem(const CItem& rhs);
 	CItem(const char* _name, int _price, int _property);
 	virtual ~CItem() {}
-	//virtual void Use() {};
+	virtual void Use(CCreatureGO* _cCreature) = 0;
 
 	const int GetProperty() const;
 	const int GetPrice() const;

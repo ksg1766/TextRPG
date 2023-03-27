@@ -29,10 +29,3 @@ CWeaponShop::~CWeaponShop()
 {
 
 }
-
-const void CWeaponShop::ShowItems() const
-{
-	for (int i = 0; i < GetNumOfItems(); ++i)
-		cout << '[' << i + 1 << ']' << " 가격 :" << GetItem(i)->GetPrice() << "\t아이템 이름 : "
-			<< GetItem(i)->GetItemName() << "\t공격력 : " << GetItem(i)->GetProperty() << '\n';
-}
