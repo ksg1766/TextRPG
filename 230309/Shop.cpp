@@ -19,16 +19,15 @@
 
 CShop::CShop(CPlayerGO* _creature) : m_cPlayer(_creature)
 {
-	AddComponent(new CStorageComponent());
+	AddComponent(new CStorageComponent(this));
 
-	/*m_cPlayerStorage = m_cPlayer->GetComponent(typeid(CStorageComponent));
-	m_cShopStorage = this->GetComponent(typeid(CStorageComponent));*/
-	m_cPlayerStorage = static_cast<CStorageComponent>(m_cPlayer->GetComponent(typeid(CStorageComponent)));
-	m_cShopStorage = static_cast<CStorageComponent>(this->GetComponent(typeid(CStorageComponent)));
+	m_cPlayerStorage = static_cast<CStorageComponent*>(m_cPlayer->GetComponent(typeid(CStorageComponent)));
+	m_cShopStorage = static_cast<CStorageComponent*>(this->GetComponent(typeid(CStorageComponent)));
 }
 
 void CShop::Update()
 {
+	int iInput;
 	while (true)
 	{
 		system("cls");
@@ -36,24 +35,24 @@ void CShop::Update()
 		m_cPlayerStorage->RenderStorage();
 
 		cout << "1. 아이템 구매   2. 아이템 판매   3. 이전 단계\n";
-		switch (int iInput = CheckInputRange(1, 3))
+		cin >> iInput;
+		switch (iInput)
 		{
 		case 1:
-			cout << "구매할 아이템의 번호를 선택하세요(이전 단계 : 9): ";
-			switch (iInput = CheckInputRange(1, 9))
+			while (true)
 			{
-			case 9:
-				break;
-			default:
-				BuyItem(m_cPlayer, iInput - 1);
-				break;
+				cout << "구매할 아이템의 번호를 선택하세요(이전 단계 : 0): ";
+				cin >> iInput;
+				if(0 == iInput)	break;
+				else			BuyItem(m_cPlayer, iInput - 1);
 			}
 			break;
 		case 2:
-			cout << "판매할 아이템의 번호를 선택하세요(이전 단계 : 9): ";
-			switch (iInput = CheckInputRange(1, 9))
+			cout << "판매할 아이템의 번호를 선택하세요(이전 단계 : 0): ";
+			cin >> iInput;
+			switch (iInput)
 			{
-			case 9:
+			case 0:
 				break;
 			default:
 				SellItem(m_cPlayer, iInput - 1);
@@ -65,22 +64,6 @@ void CShop::Update()
 		}
 	}
 }
-
-//void CShop::AddItem(const char* _name, int _price, int _property)
-//{
-//	m_cItemList[m_iNumOfItems] = new CItem(_name, _price, _property);
-//	++m_iNumOfItems;
-//}
-//
-//void CShop::SubItem(int _iIndex)
-//{
-//	/*for (int i = 0; i < m_iCapacity; ++i)
-//		if(!strcmp(m_cItemList[i]->GetName(), _name))*/
-//	delete m_cItemList[_iIndex];
-//	for (int i = _iIndex; i < m_iNumOfItems - 1; ++i)
-//		m_cItemList[i] = m_cItemList[i + 1];
-//	--m_iNumOfItems;
-//}
 
 void CShop::BuyItem(CPlayerGO* _creature, int _iIndex)
 {
@@ -96,6 +79,15 @@ void CShop::SellItem(CPlayerGO* _creature, int _iIndex)
 const void CShop::ShowItems() const
 {
 	m_cShopStorage->RenderStorage();
+	cout << "구매할 아이템의 번호를 선택하세요: ";
+}
+
+CShop::~CShop()
+{
+	Safe_Delete(m_cPlayerStorage);
+	Safe_Delete(m_cShopStorage);
+	for (CItem* c : m_vecItemList)
+		Safe_Delete(c);
 }
 
 const CItem* CShop::GetItem(int i) const

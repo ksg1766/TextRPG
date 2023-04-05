@@ -1,5 +1,4 @@
 #pragma once
-#include "define.h"
 #include "GameObject.h"
 
 class CItem;
@@ -8,7 +7,7 @@ class CStorageComponent;
 class CShop : public GameObject
 {
 public:
-	CShop();
+	//CShop();
 	CShop(const CShop& rhs);
 	CShop(CPlayerGO* _creature);
 
@@ -16,11 +15,7 @@ public:
 	void BuyItem(CPlayerGO* _creature, int _iIndex);
 	void SellItem(CPlayerGO* _creature, int _iIndex);
 	const void ShowItems() const;
-	virtual ~CShop() 
-	{
-		for (CItem* _item : m_vecItemList)
-			SAFE_DELETE(_item)
-	};
+	virtual ~CShop() override;
 
 
 	const CItem* GetItem(int i) const;
@@ -29,6 +24,7 @@ public:
 protected:
 	vector<CItem*> m_vecItemList;
 	CPlayerGO* m_cPlayer;
+
 	CStorageComponent* m_cPlayerStorage;
 	CStorageComponent* m_cShopStorage;
 };

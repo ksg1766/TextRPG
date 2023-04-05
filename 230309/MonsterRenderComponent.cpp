@@ -2,6 +2,11 @@
 #include "MonsterRenderComponent.h"
 #include "MonsterGO.h"
 
+CMonsterRenderComponent::CMonsterRenderComponent(CMonsterGO* _cMonster)
+{
+	m_cMonster = _cMonster;
+}
+
 void CMonsterRenderComponent::Init(CMonsterGO* _cMonster)
 {
 	m_cMonster = _cMonster;

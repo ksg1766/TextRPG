@@ -7,7 +7,8 @@ public:
 	CWeapon();
 	CWeapon(const CWeapon& rhs);
 	CWeapon(const char* _name, int _price, int _damage);
-	virtual void Use(CCreatureGO* _cCreature) = 0;
+	virtual ~CWeapon() override {};
 
-	~CWeapon() override {};
+	virtual void Use(CCreatureGO* _cCreature) {};
+	virtual CItem* clone() override { return new CWeapon(*this); };
 };

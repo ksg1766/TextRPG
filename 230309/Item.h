@@ -9,13 +9,13 @@ public:
 	virtual ~CItem() {}
 	virtual void Use(CCreatureGO* _cCreature) = 0;
 
-	const int GetProperty() const;
-	const int GetPrice() const;
-	const char* GetItemName() const;
-	void SetProperty(int _property);
-	void SetPrice(int _price);
-	void SetItemName(const char* name);
-
+	const int GetProperty() const {	return m_iProperty; }
+	const int GetPrice() const { return m_iPrice; }
+	const char* GetItemName() const { return m_szName; }
+	void SetProperty(int _property) { m_iProperty = _property; }
+	void SetPrice(int _price) {	m_iPrice = _price; }
+	void SetItemName(const char* name) { strcpy_s(m_szName, name); }
+	virtual CItem* clone() = 0;
 private:
 	int m_iProperty;
 	int m_iPrice;

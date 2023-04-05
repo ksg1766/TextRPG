@@ -5,6 +5,7 @@ class CPlayerGO;
 class CPlayerRenderComponent : public CRenderComponent
 {
 public:
+	CPlayerRenderComponent(CPlayerGO* _cPlayer);
 	void Init(CPlayerGO* _cPlayer);
 	//virtual void Update() override;
 

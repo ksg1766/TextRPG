@@ -1,25 +1,17 @@
 #include "stdafx.h"
 #include "ConsumShop.h"
-#include "Consumable.h"
+#include "Potion.h"
 #include "PlayerGO.h"
 #include "StorageComponent.h"
 
-CConsumShop::CConsumShop() : CShop()
-{
-}
-
-CConsumShop::CConsumShop(const CConsumShop& rhs)
-{
-}
-
 CConsumShop::CConsumShop(CPlayerGO* _cPlayer) : CShop(_cPlayer)
 {
-	m_cShopStorage->AddItem(new CConsumable("소모품1", 10, 1));
-	m_cShopStorage->AddItem(new CConsumable("소모품2", 20, 2));
-	m_cShopStorage->AddItem(new CConsumable("소모품3", 30, 3));
-	m_cShopStorage->AddItem(new CConsumable("소모품4", 40, 4));
-	m_cShopStorage->AddItem(new CConsumable("소모품5", 50, 5));
-	m_cShopStorage->AddItem(new CConsumable("소모품6", 60, 6));
-	m_cShopStorage->AddItem(new CConsumable("소모품7", 70, 7));
-	m_cShopStorage->AddItem(new CConsumable("소모품8", 80, 8));
+	m_cShopStorage->AddItem(new CPotion("회복약1", 10, 10));
+	m_cShopStorage->AddItem(new CPotion("회복약2", 20, 20));
+	m_cShopStorage->AddItem(new CPotion("회복약3", 30, 30));
+	m_cShopStorage->AddItem(new CPotion("회복약4", 40, 40));
+	m_cShopStorage->AddItem(new CPotion("회복약5", 50, 50));
+	m_cShopStorage->AddItem(new CPotion("회복약6", 60, 60));
+	m_cShopStorage->AddItem(new CPotion("회복약7", 70, 70));
+	m_cShopStorage->AddItem(new CPotion("회복약8", 80, 80));
 }

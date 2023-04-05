@@ -5,8 +5,8 @@ class CCreatureGO : public GameObject
 public:
 	CCreatureGO() : GameObject(), m_iMaxHp(0), m_iHp(0), m_iDps(0), m_iDef(0), m_state(STATE::NORMAL) {}
 	CCreatureGO(const char* _szName) : GameObject(_szName), m_iMaxHp(0), m_iHp(0), m_iDps(0), m_iDef(0), m_state(STATE::NORMAL) {}
-	
-	virtual void Update() = 0;
+	virtual ~CCreatureGO() override {};
+	//virtual void Update() = 0;
 
 #pragma region Set
 	void SetHp(int _iHp) { if (0 >= _iHp) { m_iHp = 0; m_state = STATE::DEAD; } else m_iHp = _iHp; }

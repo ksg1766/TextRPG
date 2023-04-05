@@ -1,5 +1,7 @@
 #pragma once
 
+#include "stdafx.h"
+
 #define SAFE_DELETE(p) if(p) {delete p; p = nullptr;}
 #define SAFE_DELETE_ARRAY(p) if(p) {delete[] p; p = nullptr;}
 
@@ -16,15 +18,24 @@ void Safe_Delete(T & Temp)
 	}
 }
 
-template<typename T>
-void Safe_Delete_Array(T& Temp)
-{
-	if (Temp)
-	{
-		delete Temp[];
-		Temp = nullptr;
-	}
-}
+//int CheckInputRange(int iFloor, int iCeiling)
+//{
+//	int iInput;
+//	cin >> iInput;
+//
+//	while (iInput < iFloor || iInput > iCeiling)
+//	{
+//		if (cin.fail())	// 버퍼 초기화
+//		{
+//			cin.clear();
+//			cin.ignore(INT_MAX, '\n');
+//			cout << '\n';
+//		}
+//		cout << "\n잘못된 입력입니다. 다시 선택하세요: ";
+//		cin >> iInput;
+//	}
+//	return iInput;
+//}
 
 typedef enum class GameObjectType
 {
@@ -45,16 +56,16 @@ typedef enum class Location
 
 typedef enum PlayerType
 {
-	전사 = 1,
-	마법사,
-	도적,
+	워로드 = 1,
+	소서리스,
+	스카우터,
 }JOB;
 
 typedef enum MonsterType
 {
-	슬라임 = 1,
-	스켈레톤,
-	머쉬맘,
+	발탄 = 1,
+	비아키스,
+	쿠크세이튼,
 	김태원,
 }MONSTER;
 
@@ -64,22 +75,3 @@ typedef enum class PlayerState
 	BLEEDING,
 	DEAD
 }STATE;
-
-int CheckInputRange(int iFloor, int iCeiling)
-{
-	int iInput;
-	cin >> iInput;
-
-	while (iInput < iFloor || iInput > iCeiling)
-	{
-		if (cin.fail())	// 버퍼 초기화
-		{
-			cin.clear();
-			cin.ignore(INT_MAX, '\n');
-			cout << '\n';
-		}
-		cout << "\n잘못된 입력입니다. 다시 선택하세요: ";
-		cin >> iInput;
-	}
-	return iInput;
-}

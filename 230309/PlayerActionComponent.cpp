@@ -4,6 +4,11 @@
 #include "StorageComponent.h"
 #include "Item.h"
 
+CPlayerActionComponent::CPlayerActionComponent(CCreatureGO* _cPlayer)
+{
+	m_cPlayer = static_cast<CPlayerGO*>(_cPlayer);
+}
+
 void CPlayerActionComponent::Init(CCreatureGO* _cPlayer)
 {
 	m_cPlayer = static_cast<CPlayerGO*>(_cPlayer);
@@ -11,14 +16,34 @@ void CPlayerActionComponent::Init(CCreatureGO* _cPlayer)
 
 void CPlayerActionComponent::Attack(CCreatureGO* _cTarget)
 {
+	if (m_cPlayer->GetHp() <= 0)
+		return;
+
 	cout << m_cPlayer->GetName() << "의 공격!\n";
+	int iDamage = m_cPlayer->GetDps() - _cTarget->GetDef();
+	if (0 > iDamage)	iDamage = 0;
 
-	_cTarget->SetHp(_cTarget->GetHp() - (m_cPlayer->GetDps() - _cTarget->GetDef()));
+	_cTarget->SetHp(_cTarget->GetHp() - iDamage);
 
-	if (0 > _cTarget->GetHp())
+	if (0 >= _cTarget->GetHp())
 		_cTarget->SetHp(0);
 	system("pause");
 }
+
+void CPlayerActionComponent::MiniAttack(CCreatureGO* _cTarget)
+{
+	if (m_cPlayer->GetHp() <= 0)
+		return;
+
+	cout << m_cPlayer->GetName() << "의 살살 때리기!\n";
+
+	_cTarget->SetHp(_cTarget->GetHp() - 1);
+
+	if (0 >= _cTarget->GetHp())
+		_cTarget->SetHp(0);
+	system("pause");
+}
+
 void CPlayerActionComponent::Win(CCreatureGO* _cTarget)
 {
 	cout << m_cPlayer->GetName() << "의 승리!\n";
@@ -38,7 +63,7 @@ void CPlayerActionComponent::Win(CCreatureGO* _cTarget)
 
 void CPlayerActionComponent::Lose()
 {
-	cout << "사망\n";
+	cout << "이걸 진다고...? 차라리 접으시는게...ㅎ\n";
 	system("pause");
 }
 //cout << "1. 공격   2. 살살 때리기\n";

@@ -1,12 +1,16 @@
 #pragma once
 #include "CreatureGO.h"
 
+class CMonsterGO;
 class CPlayerGO;
 class CPetGO : public CCreatureGO
 {
 public:
 	CPetGO();
 	CPetGO(const char* _szName, CPlayerGO* _cPlayer);
+	CPetGO(CMonsterGO* _cTarget, CPlayerGO* _cPlayer);
+
+	~CPetGO() override;
 
 #pragma region Set
 
@@ -18,6 +22,7 @@ public:
 
 private:
 	CPlayerGO* m_cTamer;
+	// vector<CItem*> m_vecItemList;
 	/*
 	int m_iHp;
 	int m_iDps;

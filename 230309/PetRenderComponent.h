@@ -1,10 +1,11 @@
 #pragma once
 #include "RenderComponent.h"
 
-class CPet;
+class CPetGO;
 class CPetRenderComponent : public CRenderComponent
 {
 public:
+	CPetRenderComponent(CPetGO* _cPet);
 	void Init(CPetGO* _cPet);
 	//virtual void Update() override;
 

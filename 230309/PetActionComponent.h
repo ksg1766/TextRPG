@@ -7,6 +7,7 @@ class CPetGO;
 class CPetActionComponent : public CActionComponent
 {
 public:
+	CPetActionComponent(CCreatureGO* _cPet);
 	void Init(CCreatureGO* _cPet) override;
 	void Attack(CCreatureGO* _cTarget) override;
 

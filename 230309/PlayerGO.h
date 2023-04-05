@@ -1,26 +1,29 @@
 #pragma once
-#include "CreatureGO.h"
+#include "MonsterGO.h"
+using namespace std;
 
-class CPet;
+class CPetGO;
 class CItem;
 class CPlayerGO : public CCreatureGO
 {
 public:
-	CPlayerGO();
+	CPlayerGO(JOB _job);
+	CPlayerGO* InitPlayer(JOB _job);
 
-	void InitPlayer(JOB _job);
-	virtual void Update() override;
+	~CPlayerGO() override;
+	//virtual void Update() override;
 
 #pragma region Set
-
+	void SetPet(CMonsterGO* _cTarget);
 #pragma endregion Set
 
 #pragma region Get
+	CPetGO* GetPet() { return m_cPet; }
 	vector<CItem*>* GetItemList() { return &m_vecItemList; }
 #pragma endregion Get
 
 private:
-	CPet* m_cPet;
+	CPetGO* m_cPet;
 	vector<CItem*> m_vecItemList;
 	LOCATION m_location;
 	/*

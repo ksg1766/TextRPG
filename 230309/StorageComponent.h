@@ -7,6 +7,7 @@ class CItem;
 class CStorageComponent : public Component
 {
 public:
+	CStorageComponent(GameObject* _cObject);
 	void InitStorage(GameObject* _cObject);
 
 	//virtual void Update() = 0;

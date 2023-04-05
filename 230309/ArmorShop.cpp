@@ -4,14 +4,6 @@
 #include "PlayerGO.h"
 #include "StorageComponent.h"
 
-CArmorShop::CArmorShop() : CShop()
-{
-}
-
-CArmorShop::CArmorShop(const CArmorShop& rhs)
-{
-}
-
 CArmorShop::CArmorShop(CPlayerGO* _cPlayer) : CShop(_cPlayer)
 {
 	m_cShopStorage->AddItem(new CArmor("¹æ¾î±¸1", 10, 1));

@@ -1,6 +1,11 @@
 #include "stdafx.h"
 #include "PetActionComponent.h"
 
+CPetActionComponent::CPetActionComponent(CCreatureGO* _cPet)
+{
+	m_cPet = static_cast<CPetGO*>(_cPet);
+}
+
 void CPetActionComponent::Init(CCreatureGO* _cPet)
 {
 	m_cPet = static_cast<CPetGO*>(_cPet);

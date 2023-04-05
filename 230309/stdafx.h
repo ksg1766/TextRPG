@@ -1,5 +1,5 @@
 #pragma once
 #include <iostream>
-#include "GameManager.h"
+#include "GameProcessor.h"
 
 using namespace std;

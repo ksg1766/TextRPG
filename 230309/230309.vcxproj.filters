@@ -74,29 +74,8 @@
     <ClCompile Include="stdafx.cpp">
       <Filter>소스 파일\TextRPG\main</Filter>
     </ClCompile>
-    <ClCompile Include="UI.cpp">
-      <Filter>소스 파일\TextRPG\Manager\Core</Filter>
-    </ClCompile>
-    <ClCompile Include="GameManager.cpp">
+    <ClCompile Include="GameProcessor.cpp">
       <Filter>소스 파일\TextRPG\Manager\Contents</Filter>
-    </ClCompile>
-    <ClCompile Include="Observer.cpp">
-      <Filter>소스 파일\TextRPG\Manager\Core</Filter>
-    </ClCompile>
-    <ClCompile Include="BaseCreature.cpp">
-      <Filter>소스 파일\TextRPG\Controller</Filter>
-    </ClCompile>
-    <ClCompile Include="Player.cpp">
-      <Filter>소스 파일\TextRPG\Controller</Filter>
-    </ClCompile>
-    <ClCompile Include="Pet.cpp">
-      <Filter>소스 파일\TextRPG\Controller</Filter>
-    </ClCompile>
-    <ClCompile Include="Creature.cpp">
-      <Filter>소스 파일\TextRPG\Controller</Filter>
-    </ClCompile>
-    <ClCompile Include="Inventory.cpp">
-      <Filter>소스 파일\TextRPG\UI</Filter>
     </ClCompile>
     <ClCompile Include="Armor.cpp">
       <Filter>소스 파일\TextRPG\Controller\Item</Filter>
@@ -161,46 +140,25 @@
     <ClCompile Include="GameScene.cpp">
       <Filter>소스 파일\TextRPG\Scene\BaseClass</Filter>
     </ClCompile>
-    <ClCompile Include="Field.cpp">
-      <Filter>소스 파일\TextRPG\Scene\SubClass</Filter>
-    </ClCompile>
     <ClCompile Include="FieldGS.cpp">
       <Filter>소스 파일\TextRPG\Scene\SubClass</Filter>
     </ClCompile>
     <ClCompile Include="Potion.cpp">
       <Filter>소스 파일\TextRPG\Controller\Item</Filter>
     </ClCompile>
+    <ClCompile Include="Mech.cpp">
+      <Filter>소스 파일\TextRPG\Utils</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h">
       <Filter>소스 파일\TextRPG\main</Filter>
     </ClInclude>
-    <ClInclude Include="UI.h">
-      <Filter>소스 파일\TextRPG\Manager\Core</Filter>
-    </ClInclude>
-    <ClInclude Include="GameManager.h">
+    <ClInclude Include="GameProcessor.h">
       <Filter>소스 파일\TextRPG\Manager\Contents</Filter>
-    </ClInclude>
-    <ClInclude Include="Observer.h">
-      <Filter>소스 파일\TextRPG\Manager\Core</Filter>
-    </ClInclude>
-    <ClInclude Include="BaseCreature.h">
-      <Filter>소스 파일\TextRPG\Controller</Filter>
-    </ClInclude>
-    <ClInclude Include="Player.h">
-      <Filter>소스 파일\TextRPG\Controller</Filter>
-    </ClInclude>
-    <ClInclude Include="Pet.h">
-      <Filter>소스 파일\TextRPG\Controller</Filter>
-    </ClInclude>
-    <ClInclude Include="Creature.h">
-      <Filter>소스 파일\TextRPG\Controller</Filter>
     </ClInclude>
     <ClInclude Include="define.h">
       <Filter>소스 파일\TextRPG\Utils</Filter>
-    </ClInclude>
-    <ClInclude Include="Inventory.h">
-      <Filter>소스 파일\TextRPG\UI</Filter>
     </ClInclude>
     <ClInclude Include="Armor.h">
       <Filter>소스 파일\TextRPG\Controller\Item</Filter>
@@ -277,14 +235,14 @@
     <ClInclude Include="GameScene.h">
       <Filter>소스 파일\TextRPG\Scene\BaseClass</Filter>
     </ClInclude>
-    <ClInclude Include="Field.h">
-      <Filter>소스 파일\TextRPG\Scene\SubClass</Filter>
-    </ClInclude>
     <ClInclude Include="FieldGS.h">
       <Filter>소스 파일\TextRPG\Scene\SubClass</Filter>
     </ClInclude>
     <ClInclude Include="Potion.h">
       <Filter>소스 파일\TextRPG\Controller\Item</Filter>
+    </ClInclude>
+    <ClInclude Include="Mech.h">
+      <Filter>소스 파일\TextRPG\Utils</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
